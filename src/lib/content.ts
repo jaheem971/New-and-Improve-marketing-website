@@ -25,6 +25,66 @@ export const services = [
   },
 ];
 
+export const engagementTiers = [
+  {
+    tag: "DIAGNOSE",
+    icon: "search" as const,
+    title: "Retention Audit",
+    tagline: "See exactly what's working, what's leaking revenue, and what to fix first.",
+    bestFor:
+      "Brands already running email & SMS who aren't sure where the real opportunity is.",
+    includes: [
+      "Full flow & campaign review",
+      "Prioritized fix list, ranked by revenue impact",
+      "A clear action plan you can hand to any team",
+    ],
+    priceLabel: "Book a call for pricing",
+    highlight: false,
+  },
+  {
+    tag: "BUILD",
+    icon: "layers" as const,
+    title: "Flow Build",
+    tagline: "Get the email & SMS foundation your store should already have.",
+    bestFor: "Brands with missing, outdated, or underbuilt automation.",
+    includes: [
+      "Welcome, abandoned cart/checkout & post-purchase flows",
+      "Full flow strategy & architecture",
+      "Copy + design, built and QA'd inside Klaviyo",
+    ],
+    priceLabel: "Book a call for pricing",
+    highlight: true,
+  },
+  {
+    tag: "OPERATE",
+    icon: "calendar" as const,
+    title: "Lite Management",
+    tagline: "Keep retention moving without handing over the whole channel.",
+    bestFor: "Brands with a solid foundation that need consistent execution.",
+    includes: [
+      "Monthly campaign planning & execution",
+      "List & segment management",
+      "Monthly reporting & performance reviews",
+    ],
+    priceLabel: "Book a call for pricing",
+    highlight: false,
+  },
+  {
+    tag: "OWN",
+    icon: "crown" as const,
+    title: "Full Management",
+    tagline: "Hand retention to an expert and get it off your plate completely.",
+    bestFor: "Brands ready to stop managing email & SMS internally.",
+    includes: [
+      "Full email + SMS strategy & management",
+      "Ongoing segmentation & testing",
+      "Lifecycle oversight built around growth",
+    ],
+    priceLabel: "Book a call for pricing",
+    highlight: true,
+  },
+];
+
 export const process = [
   {
     number: "01",

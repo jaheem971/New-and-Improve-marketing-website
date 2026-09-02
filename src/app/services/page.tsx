@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
+import { PricingTiers } from "@/components/pricing-tiers";
 import { ProcessSteps } from "@/components/process-steps";
 import { CtaBand } from "@/components/cta-band";
 import { services } from "@/lib/content";
@@ -47,6 +48,15 @@ export default function ServicesPage() {
           eyebrow="Services"
           title="Retention marketing, run as one system."
           description="Email and SMS aren't separate projects — they're one lifecycle system built around how your customers actually buy. Here's everything that's included."
+        />
+      </section>
+
+      <PricingTiers />
+
+      <section className="container-page pb-16">
+        <SectionHeading
+          eyebrow="What's included"
+          title="Every tier runs on the same core capabilities."
         />
       </section>
 
