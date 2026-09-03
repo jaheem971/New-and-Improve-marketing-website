@@ -3,8 +3,10 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { EmailFrame } from "@/components/email-frame";
+import { GeneralDesignsGrid } from "@/components/general-designs-grid";
 import { CtaBand } from "@/components/cta-band";
 import { caseStudies } from "@/lib/case-studies";
+import { generalDesigns } from "@/lib/general-designs";
 
 export const metadata: Metadata = {
   title: "Work — JAH Media",
@@ -60,6 +62,17 @@ export default function WorkPage() {
             </article>
           </Reveal>
         ))}
+      </section>
+
+      <section className="container-page pb-24 md:pb-32">
+        <SectionHeading
+          eyebrow="General Designs"
+          title="More work, at a glance."
+          description="Individual pieces that don't need the full case-study treatment — still real work, just presented straight."
+        />
+        <div className="mt-16">
+          <GeneralDesignsGrid designs={generalDesigns} />
+        </div>
       </section>
 
       <CtaBand />
