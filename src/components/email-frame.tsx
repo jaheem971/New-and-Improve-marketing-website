@@ -1,9 +1,26 @@
-import Image from "next/image";
-import type { EmailPiece } from "@/lib/case-studies";
+"use client";
 
-export function EmailFrame({ piece }: { piece: EmailPiece }) {
+import Image from "next/image";
+import { Maximize2 } from "lucide-react";
+import type { EmailPiece } from "@/lib/case-studies";
+import { useLightbox } from "@/components/lightbox-provider";
+
+export function EmailFrame({ piece, client }: { piece: EmailPiece; client?: string }) {
+  const openLightbox = useLightbox();
+
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface">
+    <button
+      type="button"
+      onClick={() =>
+        openLightbox({
+          title: piece.subject,
+          subtitle: client ? `${client} — ${piece.flow}` : piece.flow,
+          image: piece.image,
+          accent: piece.accent,
+        })
+      }
+      className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-border bg-surface text-left"
+    >
       <div className="flex items-center gap-1.5 border-b border-border bg-surface-2 px-3 py-2.5">
         <span className="h-2 w-2 rounded-full bg-foreground/20" />
         <span className="h-2 w-2 rounded-full bg-foreground/20" />
@@ -30,15 +47,19 @@ export function EmailFrame({ piece }: { piece: EmailPiece }) {
               className="mb-3 inline-block h-8 w-8 rounded-full"
               style={{ background: piece.accent }}
             />
-            <p className="font-display text-lg leading-tight font-medium text-balance">
+            <p className="font-display text-lg leading-tight font-medium text-balance text-background">
               {piece.subject}
             </p>
-            <p className="mt-3 text-[11px] tracking-widest text-muted uppercase">
+            <p className="mt-3 text-[11px] tracking-widest text-background/60 uppercase">
               Screenshot coming soon
             </p>
           </div>
         )}
+
+        <span className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/90 opacity-0 shadow-sm transition-opacity duration-200 group-hover:opacity-100">
+          <Maximize2 className="h-3.5 w-3.5 text-foreground" strokeWidth={2} />
+        </span>
       </div>
-    </div>
+    </button>
   );
 }

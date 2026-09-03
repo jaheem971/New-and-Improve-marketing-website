@@ -72,7 +72,7 @@ export default async function CaseStudyPage({
                 .filter((p) => p.flow === flow)
                 .map((piece) => (
                   <div key={piece.subject}>
-                    <EmailFrame piece={piece} />
+                    <EmailFrame piece={piece} client={study.client} />
                     <p className="mt-3 text-sm leading-snug text-muted">{piece.subject}</p>
                   </div>
                 ))}

@@ -55,7 +55,7 @@ export default function WorkPage() {
 
                 <div className="grid flex-1 grid-cols-2 gap-4 sm:grid-cols-4">
                   {study.pieces.map((piece) => (
-                    <EmailFrame key={piece.subject} piece={piece} />
+                    <EmailFrame key={piece.subject} piece={piece} client={study.client} />
                   ))}
                 </div>
               </div>
