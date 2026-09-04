@@ -50,21 +50,4 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
   },
-  {
-    slug: "goodles",
-    client: "Goodles",
-    industry: "Food / CPG",
-    summary:
-      "A high-energy abandoned-checkout email for a better-for-you mac & cheese brand — built to match Goodles' loud, playful voice while doing the quiet work of getting carts back.",
-    services: ["Abandoned Checkout Flow", "Klaviyo Design & Build"],
-    accent: "#e8312f",
-    bg: "#4a2e05",
-    pieces: [
-      {
-        subject: "One Click Away From Love At First Bite",
-        flow: "Abandoned Checkout",
-        accent: "#e8312f",
-      },
-    ],
-  },
 ];

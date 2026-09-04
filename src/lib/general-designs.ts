@@ -37,9 +37,9 @@ export const generalDesigns: GeneralDesign[] = [
     image: "/work/general/hears-1.png",
   },
   {
-    id: "ilus-1",
-    title: "Meet SeamLux™",
-    brand: "ILUS",
-    accent: "#8a5a34",
+    id: "goodles-1",
+    title: "One Click Away From Love At First Bite",
+    brand: "Goodles",
+    accent: "#e8312f",
   },
 ];
