@@ -41,5 +41,6 @@ export const generalDesigns: GeneralDesign[] = [
     title: "One Click Away From Love At First Bite",
     brand: "Goodles",
     accent: "#e8312f",
+    image: "/work/general/goodles-1.png",
   },
 ];
