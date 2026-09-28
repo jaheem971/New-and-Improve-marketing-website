@@ -49,7 +49,7 @@ export function WorkPreview() {
               </div>
 
               <div className="grid flex-1 grid-cols-2 gap-4 sm:grid-cols-4">
-                {study.pieces.map((piece) => (
+                {study.pieces.slice(0, 4).map((piece) => (
                   <EmailFrame key={piece.subject} piece={piece} client={study.client} />
                 ))}
               </div>
