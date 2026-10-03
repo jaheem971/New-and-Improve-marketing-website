@@ -2,10 +2,17 @@
 
 import Image from "next/image";
 import { Maximize2 } from "lucide-react";
-import type { EmailPiece } from "@/lib/case-studies";
 import { useLightbox } from "@/components/lightbox-provider";
 
-export function EmailFrame({ piece, client }: { piece: EmailPiece; client?: string }) {
+type Piece = {
+  subject: string;
+  flow: string;
+  image?: string;
+  accent: string;
+  analysis?: string[];
+};
+
+export function EmailFrame({ piece, client }: { piece: Piece; client?: string }) {
   const openLightbox = useLightbox();
 
   return (
@@ -17,6 +24,7 @@ export function EmailFrame({ piece, client }: { piece: EmailPiece; client?: stri
           subtitle: client ? `${client} — ${piece.flow}` : piece.flow,
           image: piece.image,
           accent: piece.accent,
+          analysis: piece.analysis,
         })
       }
       className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-border bg-surface text-left"

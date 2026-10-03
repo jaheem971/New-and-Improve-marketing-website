@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { EmailFrame } from "@/components/email-frame";
 import { GeneralDesignsGrid } from "@/components/general-designs-grid";
+import { ConceptWork } from "@/components/concept-work";
 import { CtaBand } from "@/components/cta-band";
 import { caseStudies } from "@/lib/case-studies";
 import { generalDesigns } from "@/lib/general-designs";
@@ -74,6 +75,8 @@ export default function WorkPage() {
           <GeneralDesignsGrid designs={generalDesigns} />
         </div>
       </section>
+
+      <ConceptWork />
 
       <CtaBand />
     </>
