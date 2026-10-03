@@ -65,6 +65,8 @@ export default function WorkPage() {
         ))}
       </section>
 
+      <ConceptWork />
+
       <section className="container-page pb-24 md:pb-32">
         <SectionHeading
           eyebrow="General Designs"
@@ -75,8 +77,6 @@ export default function WorkPage() {
           <GeneralDesignsGrid designs={generalDesigns} />
         </div>
       </section>
-
-      <ConceptWork />
 
       <CtaBand />
     </>
